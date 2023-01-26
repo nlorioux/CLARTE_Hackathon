@@ -7,10 +7,13 @@ public class Teleporter : MonoBehaviour
 
     //Variables
     public int rayLenght=10;
-    public float delay=0.1f;
+    public float delay=0.0001f;
     bool AboutTotoleport=false;
     Vector3 teleportPos=new Vector3(); //for the target (gost)
     public Material tMat;
+    //for shooting
+    bool canShoot=false;
+    public AudioClip  ShootAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,10 +43,21 @@ public class Teleporter : MonoBehaviour
                 lr.SetPosition(1,hit.point);
 
                 GameObject.Destroy(myLine,delay);
+                if(hit.collider.tag=="Ghost"){
+                    canShoot=true;
+                }
+                else{
+                    canShoot=false;
+                }
+                if(canShoot&&OVRInput.Get(OVRInput.Button.Two)){
+                    Debug.Log("can Shoot");
+                    //add shoot sound and animation
+                    AudioSource.PlayClipAtPoint(ShootAudio,transform.position);
 
-
+                }
 
             }
+
         }
     }
 }
