@@ -738,6 +738,9 @@ MonoBehaviour:
   Health: 0
   MaxHealth: 300
   HealthSlider: {fileID: 0}
+  PlayerDie: 0
+  PlayerDieUI: {fileID: 0}
+  PlayerUI: {fileID: 0}
 --- !u!1001 &2465072238702610078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -851,6 +854,9 @@ MonoBehaviour:
   Health: 0
   MaxHealth: 300
   HealthSlider: {fileID: 0}
+  PlayerDie: 0
+  PlayerDieUI: {fileID: 0}
+  PlayerUI: {fileID: 0}
 --- !u!4 &2465072238702670974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
