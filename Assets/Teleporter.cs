@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Teleporter : MonoBehaviour
 {
@@ -14,7 +15,18 @@ public class Teleporter : MonoBehaviour
     //for shooting
     bool canShoot=false;
     public AudioClip  ShootAudio;
+    
+    //Player 
+    public float Health;
+    public float MaxHealth=300f;
+    public Slider HealthSlider;
+  
     // Start is called before the first frame update
+    void Awake(){
+        Health=MaxHealth;
+        HealthSlider.value=Health;
+        
+    }
     void Start()
     {
         
@@ -23,9 +35,12 @@ public class Teleporter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HealthSlider.value=Health;
+        
         RaycastHit hit; //if ray make contact with an object
 
         if(OVRInput.Get(OVRInput.Button.One)){
+            
             if(Physics.Raycast(transform.position,transform.forward,out hit,rayLenght=10)){
                 teleportPos=hit.point;
                 AboutTotoleport=true;
@@ -49,7 +64,7 @@ public class Teleporter : MonoBehaviour
                 else{
                     canShoot=false;
                 }
-                if(canShoot&&OVRInput.Get(OVRInput.Button.Two)){
+                if(canShoot&&(OVRInput.GetDown(OVRInput.Button.Two))){
                     Debug.Log("can Shoot");
                     //add shoot sound and animation
                     AudioSource.PlayClipAtPoint(ShootAudio,transform.position);
