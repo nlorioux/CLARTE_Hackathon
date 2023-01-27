@@ -20,8 +20,9 @@ public class ghost : MonoBehaviour
         delay = 0.01f;
         timer = speed;
         player = GameObject.Find("OVRCameraRig");
-        player1 = GameObject.Find("OculusTouchForQuest2RightModel");
+        player1 = GameObject.Find("OVRCameraRig/TrackingSpace/RightHandAnchor/OVRControllerPrefab/OculusTouchForQuest2RightModel");
         transform.forward = (player.transform.position-transform.position).normalized;
+        health_point=10;
     }
 
     // Update is called once per frame
@@ -48,7 +49,7 @@ public class ghost : MonoBehaviour
             DieGhost();
         }
         else{
-            health_point-=2;
+            health_point-=5;
         }
     }
     public void DieGhost(){
