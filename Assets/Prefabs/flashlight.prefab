@@ -136,17 +136,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7555667361704316665}
     m_Modifications:
-    - target: {fileID: 351227925999859547, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a6562c892f90a4f4fbc890e0a3563f17, type: 2}
     - target: {fileID: 1483059958524464180, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483059958524464180, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 1483059958524464180, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,14 +184,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: flashray Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 2296610960414381710, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296610960414381710, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
-      propertyPath: m_TagString
-      value: Flashlight
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
 --- !u!4 &8338929837622558881 stripped
@@ -207,22 +191,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1483059958524464180, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
   m_PrefabInstance: {fileID: 7434659779283438741}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8715032824007514651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2296610960414381710, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
-  m_PrefabInstance: {fileID: 7434659779283438741}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &3195596531549288576
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8715032824007514651}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6239881831769578202, guid: f61c5b7ddd9607c4c9c3c7fc78fb81df, type: 3}

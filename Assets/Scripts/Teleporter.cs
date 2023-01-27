@@ -20,7 +20,7 @@ public class Teleporter : MonoBehaviour
     //Player 
     public float Health;
     public float MaxHealth=300f;
-    public Slider HealthSlider;
+    //public Slider HealthSlider;
     public bool PlayerDie=false;
     public Canvas PlayerDieUI;
     public Canvas PlayerUI;
@@ -28,7 +28,7 @@ public class Teleporter : MonoBehaviour
     // Start is called before the first frame update
     void Awake(){
         Health=MaxHealth;
-        HealthSlider.value=Health;
+        //HealthSlider.value=Health;
         
     }
     void Start()
@@ -39,7 +39,7 @@ public class Teleporter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HealthSlider.value=Health;
+        //HealthSlider.value=Health;
         
         RaycastHit hit; //if ray make contact with an object
 

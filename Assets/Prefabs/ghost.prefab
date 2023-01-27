@@ -227,3 +227,4 @@ MonoBehaviour:
   isDead: 0
   player1: {fileID: 0}
   SafeZone: 0.1
+  GhostAppears: {fileID: 8300000, guid: 541a5932d4c94c84baf80f3ceb5b27b4, type: 3}

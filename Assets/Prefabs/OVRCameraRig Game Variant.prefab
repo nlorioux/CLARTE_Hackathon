@@ -120,36 +120,20 @@ PrefabInstance:
       propertyPath: m_controller
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1913107612332267061, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: tMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 490721126139d364f8eb60a5535bcc4e, type: 2}
+    - target: {fileID: 1913107612332267061, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: ShootAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 4968414253a363b448ed7e6da56277ac, type: 3}
+    - target: {fileID: 1913107612332267061, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: DamageAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 06fc058b0b5a3be48b626e07d69c9b9b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
---- !u!1 &2213503001772697194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3092784099471880361, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
-  m_PrefabInstance: {fileID: 3772951611497993923}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7711667414932609574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2213503001772697194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b769b9a402efb4eb0cb4441c3cff49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayLenght: 10
-  delay: 0.01
-  tMat: {fileID: 2100000, guid: 490721126139d364f8eb60a5535bcc4e, type: 2}
-  ShootAudio: {fileID: 8300000, guid: 4968414253a363b448ed7e6da56277ac, type: 3}
-  Health: 0
-  MaxHealth: 300
-  HealthSlider: {fileID: 0}
-  PlayerDie: 0
-  PlayerDieUI: {fileID: 0}
-  PlayerUI: {fileID: 0}
-  Ghost: {fileID: 0}
 --- !u!1001 &6875750970728442257
 PrefabInstance:
   m_ObjectHideFlags: 0
