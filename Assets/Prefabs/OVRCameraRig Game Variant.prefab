@@ -127,7 +127,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3092784099471880361, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
   m_PrefabInstance: {fileID: 3772951611497993923}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &879777064469827593
+--- !u!114 &7711667414932609574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,13 +136,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2213503001772697194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 009cb26885d7fe34bb0357e08bae9d00, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b769b9a402efb4eb0cb4441c3cff49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rayLenght: 10
   delay: 0.01
   tMat: {fileID: 2100000, guid: 490721126139d364f8eb60a5535bcc4e, type: 2}
-  ShootAudio: {fileID: 0}
+  ShootAudio: {fileID: 8300000, guid: 4968414253a363b448ed7e6da56277ac, type: 3}
   Health: 0
   MaxHealth: 300
   HealthSlider: {fileID: 0}

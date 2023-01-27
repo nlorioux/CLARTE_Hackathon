@@ -14,7 +14,7 @@ public class spawn_ghost : MonoBehaviour
     {
         delay = 5;
         timer = delay;
-        player = GameObject.Find("OVRCameraRig");
+        player = GameObject.Find("OVRCameraRig Game Variant");
     }
 
     // Update is called once per frame

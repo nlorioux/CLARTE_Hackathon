@@ -19,8 +19,8 @@ public class ghost : MonoBehaviour
         speed = 0.05f;
         delay = 0.01f;
         timer = speed;
-        player = GameObject.Find("OVRCameraRig");
-        player1 = GameObject.Find("OVRCameraRig/TrackingSpace/RightHandAnchor/OVRControllerPrefab/OculusTouchForQuest2RightModel");
+        player = GameObject.Find("OVRCameraRig Game Variant");
+        player1 = GameObject.Find("OVRCameraRig Game Variant/TrackingSpace/RightHandAnchor/OVRControllerPrefab/OculusTouchForQuest2RightModel");
         transform.forward = (player.transform.position-transform.position).normalized;
         health_point=10;
     }
