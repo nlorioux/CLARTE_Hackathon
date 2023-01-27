@@ -9,7 +9,7 @@ using Oculus.Platform.Models;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Teleporter : MonoBehaviour
+public class Edition : MonoBehaviour
 {
 
     //Variables
