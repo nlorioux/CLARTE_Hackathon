@@ -16,5 +16,6 @@ public class flash_light : MonoBehaviour
     void Update()
     {
         transform.position = left_controller.transform.position;
+        transform.rotation = left_controller.transform.rotation;
     }
 }
