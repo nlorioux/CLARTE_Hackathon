@@ -963,6 +963,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7711667414932609574, guid: efa6a85ddc7122b42b4986f249c3e7f8, type: 3}
+      propertyPath: DamageAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: a1cf115acb62fba40a7aea9bc1fb9085, type: 3}
+    - target: {fileID: 7711667414932609574, guid: efa6a85ddc7122b42b4986f249c3e7f8, type: 3}
       propertyPath: HealthSlider
       value: 
       objectReference: {fileID: 1127929224}
