@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7555667361704316665}
   - component: {fileID: 2895499515817144561}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: flashlight
-  m_TagString: Untagged
+  m_TagString: Flashlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: flashlight Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8659383730384692138, guid: 985e748cffe949849b8b8d27621c6080, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659383730384692138, guid: 985e748cffe949849b8b8d27621c6080, type: 3}
+      propertyPath: m_TagString
+      value: Flashlight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985e748cffe949849b8b8d27621c6080, type: 3}
 --- !u!4 &2988299977663065690 stripped
@@ -183,6 +191,14 @@ PrefabInstance:
     - target: {fileID: 2296610960414381710, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
       propertyPath: m_Name
       value: flashray Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296610960414381710, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296610960414381710, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}
+      propertyPath: m_TagString
+      value: Flashlight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe93cceeb243cd42ab46c8749ba6a5a, type: 3}

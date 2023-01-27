@@ -44,8 +44,9 @@ public class Teleporter : MonoBehaviour
         RaycastHit hit; //if ray make contact with an object
 
         if(OVRInput.Get(OVRInput.Button.SecondaryHandTrigger)){
+            int layerMask=1<<2;
             
-            if(Physics.Raycast(transform.position,transform.forward,out hit,rayLenght=100)){
+            if(Physics.Raycast(transform.position,transform.forward,out hit,100, ~layerMask)){
                 teleportPos=hit.point;
                 AboutTotoleport=true;
 

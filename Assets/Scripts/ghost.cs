@@ -39,7 +39,6 @@ public class ghost : MonoBehaviour
                  healthPlayer.DamagePlayer();
                  Destroy(gameObject);
             }
-            Debug.Log(distance);
         }
         
     }
@@ -56,5 +55,20 @@ public class ghost : MonoBehaviour
        
        //Animation Die 
        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log("TEST1");
+        if (other.tag=="Flashlight"){
+            Debug.Log("TEST2");
+            GetComponent<MeshRenderer>().enabled=true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.tag=="Flashlight"){
+            GetComponent<MeshRenderer>().enabled=false;
+        }
+        
     }
 }
