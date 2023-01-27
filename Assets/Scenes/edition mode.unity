@@ -472,7 +472,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1310230385}
   - component: {fileID: 1310230384}
-  - component: {fileID: 1310230383}
   - component: {fileID: 1310230386}
   m_Layer: 0
   m_Name: Main Camera
@@ -481,14 +480,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1310230383
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310230382}
-  m_Enabled: 1
 --- !u!20 &1310230384
 Camera:
   m_ObjectHideFlags: 0
@@ -597,7 +588,7 @@ Transform:
   m_Father: {fileID: 414772384}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6544165482007927054
+--- !u!1001 &2142542276
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -606,7 +597,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6544165480689710539, guid: b45ddcaac107b034fa024b7840650524, type: 3}
       propertyPath: m_Name
-      value: OVRCameraRig
+      value: OVRCameraRig Edition Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6544165480689936875, guid: b45ddcaac107b034fa024b7840650524, type: 3}
       propertyPath: m_RootOrder

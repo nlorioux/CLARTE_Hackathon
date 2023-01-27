@@ -60,7 +60,7 @@ public class Edition : MonoBehaviour
 
         DrawLine();
 
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.9){
+        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.9){
             if(vetexIndex== 0)
             {
                 vetex1Pos = CalculateEnd();
@@ -70,7 +70,7 @@ public class Edition : MonoBehaviour
             DrawCube(vetex1Pos, CalculateEnd());
         }
 
-        if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) == 0)
+        if(OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) == 0)
         {
             if(vetexIndex== 1)
             {
@@ -152,7 +152,11 @@ public class Edition : MonoBehaviour
             sd = JsonUtility.FromJson<SaveData>(jsondata);
         }
 
-
+        else
+        {
+            sd = new SaveData();
+            sd.Cubes = new List<CubeData>();
+        }
     }
 
     private void OnDisable()
