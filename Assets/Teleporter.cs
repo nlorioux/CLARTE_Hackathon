@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 //using System.Numerics;
 using Facebook.WitAi;
+using Meta.Wit.LitJson;
 using Oculus.Platform.Models;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -33,13 +35,23 @@ public class Teleporter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sd = new SaveData();
-        sd.Cubes = new List<CubeData>();
         cubes = new List<GameObject>();
+        cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        for (int i =0; i < sd.Cubes.Count; i++)
+        {
+            var cubeData = sd.Cubes[i];
+            cube.transform.position = cubeData.transformPosition;
+            Vector3 scale = cubeData.transformScale;
+            cube.transform.rotation = cubeData.transformRotation;
+            cube.transform.localScale = scale;
+            cube.GetComponent<Renderer>().sharedMaterial = cubeMat;
+            cubes.Add(GameObject.Instantiate(cube));
+        }
+        //sd = new SaveData();
+        //sd.Cubes = new List<CubeData>();
+
         myLine = new GameObject();
         myLine.AddComponent<LineRenderer>();
-        cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        
     }
 
     // Update is called once per frame
@@ -132,15 +144,25 @@ public class Teleporter : MonoBehaviour
 
         return endPosition;
     }
+    private void OnEnable()
+    {
+        if (File.Exists(Application.persistentDataPath + "/Scene.json"))
+        {
+            var jsondata = System.IO.File.ReadAllText(Application.persistentDataPath + "/Scene.json");
+            sd = JsonUtility.FromJson<SaveData>(jsondata);
+        }
+
+
+    }
 
     private void OnDisable()
     {
         var jsonData = JsonUtility.ToJson(sd);
         //save the json somewhere
         DateTime dateTime= DateTime.Now;
-        string strNowTime = string.Format("{0:D}{1:D}{2:D}{3:D}{4:D}{5:D}", dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
-        System.IO.File.WriteAllText(Application.persistentDataPath + "/Scene" + strNowTime + ".json", jsonData);
-        Debug.Log(Application.persistentDataPath);
+        
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Scene.json", jsonData);
+
     }
 }
          
