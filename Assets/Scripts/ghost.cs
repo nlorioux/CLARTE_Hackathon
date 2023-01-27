@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ghost : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ghost : MonoBehaviour
     public bool isDead=false;
     public GameObject player1;
     public float SafeZone=1.5f;
+    public AudioClip GhostAppears;
     // Start is called before the first frame update
     
     void Start()
@@ -36,10 +38,9 @@ public class ghost : MonoBehaviour
             timer=delay;
             if (distance<1.5){
                 Teleporter healthPlayer =player1.GetComponent<Teleporter>();
-                 healthPlayer.DamagePlayer();
-                 Destroy(gameObject);
+                healthPlayer.DamagePlayer();
+                Destroy(gameObject);
             }
-            Debug.Log(distance);
         }
         
     }
@@ -56,5 +57,19 @@ public class ghost : MonoBehaviour
        
        //Animation Die 
        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag=="Flashlight"){
+            GetComponent<MeshRenderer>().enabled=true;
+            AudioSource.PlayClipAtPoint(GhostAppears,player.transform.position);
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.tag=="Flashlight"){
+            GetComponent<MeshRenderer>().enabled=false;
+        }
+        
     }
 }
