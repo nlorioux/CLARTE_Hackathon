@@ -110,11 +110,11 @@ public class Edition : MonoBehaviour
 
     private void DrawLine()
     {
-        if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).y > 0)
+        if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).y > 0)
         {
             length += 0.1f;
         }
-        if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).y < 0 && length > 0.5)
+        if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).y < 0 && length > 0.5)
         {
             length -= 0.1f;
         }
