@@ -142,7 +142,7 @@ MonoBehaviour:
   rayLenght: 10
   delay: 0.1
   tMat: {fileID: 2100000, guid: 490721126139d364f8eb60a5535bcc4e, type: 2}
-  cubeMat: {fileID: 0}
+  cubeMat: {fileID: 2100000, guid: 61ff86488d4629041aa8ab765e946ce4, type: 2}
 --- !u!1001 &6544165480689808239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_Name
-      value: OVRCameraRig Variant
+      value: OVRCameraRig Edition Variant
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_RootOrder
