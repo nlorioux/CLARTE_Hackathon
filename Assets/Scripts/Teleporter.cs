@@ -15,7 +15,8 @@ public class Teleporter : MonoBehaviour
     //for shooting
     bool canShoot=false;
     public AudioClip  ShootAudio;
-    
+    public AudioClip DamageAudio;
+
     //Player 
     public float Health;
     public float MaxHealth=300f;
@@ -89,6 +90,7 @@ public class Teleporter : MonoBehaviour
         }
         else{
             Health-=10;
+            AudioSource.PlayClipAtPoint(DamageAudio, transform.position);
         }
     }
     void DiePlayer(){
